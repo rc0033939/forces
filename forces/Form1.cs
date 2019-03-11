@@ -40,5 +40,10 @@ namespace forces
             return (Math.Acos(x) * 180 / Math.PI);
 
         }
+
+        private void calculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
