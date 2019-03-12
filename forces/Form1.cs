@@ -24,25 +24,40 @@ namespace forces
         }
         double sin(double x)
         {
-            return (Math.Sin(x * Math.PI / 180.0));
+            return (Math.Sin(x) * 180.0 / Math.PI);
         }
         double asin(double x)
         {
             return (Math.Asin(x) * 180 / Math.PI);
 
         }
-        double Cos(double x)
+        double  Cos(double x)
         {
-            return (Math.Cos(x * Math.PI / 180.0));
+            return (Math.Cos(x) * 180.0 / Math.PI);
         }
-        double acos(double x)
+        double Acos(double x)
         {
-            return (Math.Acos(x) * 180 / Math.PI);
-
+            return (Math.Acos(x) * 180.0 / Math.PI);
         }
 
         private void calculate_Click(object sender, EventArgs e)
         {
+            double F = double.Parse(textBox1.Text);
+            double angle = double.Parse(textBox2.Text);
+
+            double fx = F * Cos(angle);
+            double Fy = F * sin(angle);
+            MessageBox.Show("Fx = " + fx + "*n");
+            MessageBox.Show("Fy = " + Fy + "*n");
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+
+         
+
 
         }
     }
